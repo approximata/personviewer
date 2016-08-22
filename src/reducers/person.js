@@ -8,32 +8,37 @@ const initstate = [
   }
 ];
 
-// const person = (state, action) => {
-//   switch (action.type) {
-//     case 'DEL_LINE':
-//       const newstate = state.filter(function() {
-//         return state.nick !== action.nick
-//       });
-//       return newstate;
-//   }
-// };
-
-const persons = (state = initstate, action) => {
+const person = (state, action) => {
   switch (action.type) {
-    case 'PERSONINFO_LOADED':
-    console.log(state);
-      return Object.keys(action.personInfo).reduce((prev, key) => prev.concat(action.personInfo[key]), []);
-
-    case 'DEL_LINE':
-      console.log("Del line reducer arrived");
-      console.log(action.nick);
-      console.log(state.filter((e) => e.nick !== action.nick));
-      return state.filter((e) => e.nick !== action.nick);
+    case 'ADD_PERSON':
+      return {
+        name: action.name,
+        job: action.job,
+        age: action.age,
+        nick: action.nick,
+        employee: action.employee,
+      };
     default:
       return state;
   }
 };
 
+const persons = (state = initstate, action) => {
+  switch (action.type) {
+    case 'PERSONINFO_LOADED':
+      return Object.keys(action.personInfo).reduce((prev, key) => prev.concat(action.personInfo[key]), []);
 
+    case 'ADD_PERSON':
+      return [
+        ...state,
+        person(undefined, action),
+      ];
+
+    case 'DEL_LINE':
+      return state.filter((s) => s.nick !== action.nick);
+    default:
+      return state;
+  }
+};
 
 export default persons;
