@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-import { ShowModal } from 'redux-basic-modal';
+import Modal from 'react-bootstrap-modal';
+
 
 const AddButton = ({ onClick }) => (
   <div>
     <button type="button" name="AddButton" onClick={onClick}>Add</button>
-    <ShowModal modalName='HelloModal'>Show</ShowModal>
   </div>
 );
 

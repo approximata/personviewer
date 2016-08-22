@@ -1,14 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addPerson } from '../actions';
+// import { showModal } from '../actions';
 import InputPerson from '../prescomponents/Form';
+
+// const visibleForm = (filter) => {
+//   switch (filter) {
+//     case 'ADD':
+//       return true
+//     case 'OK':
+//       return false
+//     case 'CANCEL':
+//       return false
+//   }
+// }
+//
+
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: (name, job, age, nick, employee) => {
-      if (employee === 'on'){
-        employee = true
-      } else { employee = false };
       dispatch(addPerson(name, job, age, nick, employee));
     },
   };

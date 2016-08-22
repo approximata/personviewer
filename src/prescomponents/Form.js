@@ -30,7 +30,7 @@ const InputPerson = ({onClick}) => {
             inputJob = node;
           }}
         />
-        <input className="age" type="number" name="inputAge"
+        <input className="age" type="string" name="inputAge"
           ref={node => {
             inputAge = node;
           }}

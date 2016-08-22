@@ -11,7 +11,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onPersonClick: (nick) => {
-      console.log("delete action dispatching");
       dispatch(deleteLineAction(nick));
     },
   };
