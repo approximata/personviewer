@@ -45,7 +45,6 @@ const InputPerson = ({onClick}) => {
             inputEmployee = node;
           }}
         />
-
         <button type="submit">
           Ok
         </button>

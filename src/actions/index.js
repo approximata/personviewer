@@ -11,6 +11,20 @@ export const storeData = (dispatch) => {
   return dispatch(storeDataLoaded(json));
 };
 
+export const showModal = (modalName) => {
+  return {
+    type: 'SHOW_MODAL',
+    modalName,
+  };
+};
+
+export const hideModal = (modalName) => {
+  return {
+    type: 'HIDE_MODAL',
+    modalName,
+  };
+};
+
 export const addPerson = (name, job, age, nick, employee) => {
   return {
     type: 'ADD_PERSON',

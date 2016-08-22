@@ -1,10 +1,6 @@
 import React, { PropTypes } from 'react';
 import Person from './Person';
 
-// const personid = () => (
-//   const newid = Person.name.length.toString() + Person.nick;
-//   Person.name.split(' ').forEach(element => newid += element.charAt[0]);)
-
 const PersonList = ({ persons, onPersonClick }) => (
   <div className="Table">
     <div className="Table-row Table-header">
