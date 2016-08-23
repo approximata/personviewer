@@ -2,9 +2,9 @@ const initstate = [
   {
     name: "initname",
     job: "initjob",
-    age: "27",
+    age: "initnum",
     nick: "initnick",
-    employee: true,
+    employee: false,
   }
 ];
 

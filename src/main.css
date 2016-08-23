@@ -2,40 +2,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-align: left;
-  background-image: url('http://www.thewallpapers.org/photo/57302/PaperPlane.jpg');
+  background-image: url('http://www.thepaperwall.com/wallpapers/architecture/big/big_400460ad1d2d8f2a91214587c4b461947ce249ee.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: #1C3340;
 }
-/*
-header {
-  text-align: center;
-}
 
-.personlist{
-  display: flex;
-  flex-direction: column;
-  margin: 0 50px;
-}
-
-.person-item{
-  display: flex;
-  flex-direction: column;
-}
-
-.newslist .headline {
-  font-size: 20px;
-}
-
-.newslist .synopsis {
-  margin-top: 0;
-}
-
-.newslist .headline {
-  margin-bottom: 5px;
-}*/
-.Table {
+.Table, .datadump {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -60,6 +34,12 @@ header {
   margin: 0.5rem;
   line-height: 1.5;
 }
+
+.datadump{
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+}
 .Table-header {
   display: none;
 }
@@ -78,7 +58,7 @@ header {
 .Table-row:nth-of-type(odd) {
   background-color: #ffffff;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .Table-row {
     display: -webkit-box;
     display: -moz-box;
@@ -91,7 +71,7 @@ header {
     -moz-flex-flow: row nowrap;
     flex-flow: row nowrap;
   }
-  .Table-row:nth-of-type(even) {
+  .Table-row:nth-of-type, (even) {
     background-color: #ffffff;
   }
   .Table-row:nth-of-type(odd) {
@@ -123,12 +103,21 @@ header {
   padding: 0.5em;
   word-break: break-word;
 }
+.Table-name{
+  min-width: 300px;
+}
+.Table-age{
+  max-width: 70px;
+}
+.Table-employee{
+  max-width: 80px;
+}
 .Table-row-item:before {
   content: attr(data-header);
   width: 30%;
   font-weight: 700;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .Table-row-item {
     border: 1px solid #ffffff;
     padding: 0.5em;

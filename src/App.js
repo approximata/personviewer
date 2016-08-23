@@ -1,12 +1,11 @@
 import React from 'react';
 import AddPerson from './containers/AddPerson';
-import AddButton from './prescomponents/Add';
+// import AddButton from './prescomponents/Add';
 import VisiblePersonInfo from './containers/VisiblePersonInfo';
 import AddDump from './containers/AddDump';
 
 const App = () => (
   <div className="app">
-    <AddButton />
     <AddPerson />
     <VisiblePersonInfo />
     <AddDump />

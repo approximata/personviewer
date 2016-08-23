@@ -4,10 +4,10 @@ import Person from './Person';
 const PersonList = ({ persons, onPersonClick }) => (
   <div className="Table">
     <div className="Table-row Table-header">
-      <div className="Table-row-item">Name job title</div>
-      <div className="Table-row-item">Age</div>
+      <div className="Table-row-item Table-name">Name job title</div>
+      <div className="Table-row-item Table-age">Age</div>
       <div className="Table-row-item">Nickname</div>
-      <div className="Table-row-item">Employee</div>
+      <div className="Table-row-item Table-employee">Employee</div>
       <div className="Table-row-item">Action</div>
     </div>
     <div className="personlist" name="listed">

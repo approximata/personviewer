@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 
 const Person = ({ onClick, name, job, age, nick, employee }) => (
   <div className="Table-row">
-    <div className="Table-row-item" data-header="Name"><p>{name}</p><p>{job}</p></div>
-    <div className="Table-row-item" data-header="age">{age}</div>
+    <div className="Table-row-item Table-name" data-header="Name"><p>{name}</p> <p> / </p> <p>{job}</p></div>
+    <div className="Table-row-item Table-age" data-header="age">{age}</div>
     <div className="Table-row-item" data-header="Nickname">{nick}</div>
-    <div className="Table-row-item" data-header="Employee">
+    <div className="Table-row-item Table-employee" data-header="Employee">
       <label><input type="checkbox" checked={employee} readOnly></input></label>
     </div>
     <div className="Table-row-item" onClick={onClick} data-header="Action">Delete</div>
